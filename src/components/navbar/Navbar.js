@@ -8,9 +8,9 @@ import { HiShoppingCart } from "react-icons/hi";
 function Navbar() {
 
     return (
-        <div className="container mx-auto">
+        <div className="w-full">
             <div className="flex justify-between items-center p-6">
-                <img src={Logo} alt="Favicon" className='w-48 h-8' />
+                <img src={Logo} alt="Favicon" className='w-48 h-7' />
                 <nav>
                     <ul className="flex flex-row gap-[4.5rem]">
                         <li>Home</li>
