@@ -47,7 +47,7 @@ function Banner() {
                         <br />
                         Pendant
                     </h1>
-                    <button className='uppercase text-white bg-black p-3 w-40 font-semibold tracking-[3px] inline-block
+                    <button className='uppercase text-white bg-black p-3 w-40 font-semibold tracking-[3px]
                     hover:bg-white hover:text-black hover:border-[1px] hover:border-black transition-all ease-linear'>shop now</button>
                 </div>
                 </SwiperSlide>

@@ -9,6 +9,7 @@ import pro7 from '../../assets/images/products/7.jpg';
 import pro8 from '../../assets/images/products/8.jpg';
 import pro9 from '../../assets/images/products/9.jpg';
 import pro10 from '../../assets/images/products/10.jpg';
+import cabinet from '../../assets/images/products/cabinet.jpg';
 import { useState } from "react";
 
 function Products() {
@@ -32,7 +33,7 @@ function Products() {
     return (
         <>
             <NavItem />
-            <div className="container mx-auto">
+            <div className="container mx-auto mb-20">
                 <div className="grid grid-cols-3 gap-6">
                     {products.map((product, index) => (
                         <div
@@ -54,10 +55,28 @@ function Products() {
                                 <h3 className="font-normal text-xl">Lorem ipsum decor three</h3>
                                 <button className="text-red-700 text-xl font-bold"> + Add to cart</button>
                             </div>
-                            {product.discount && <span className="mt-2 line-through text-gray-400 mr-3">${product.priceOff}</span>}
-                            <span className="font-bold mt-2">${product.price}</span>
+                            <div className="mt-5">
+                                {product.discount && <span className="mt-2 line-through text-gray-400 mr-3">${product.priceOff}</span>}
+                                <span className="font-bold mt-2">${product.price}</span>
+                            </div>
+
                         </div>
                     ))}
+                </div>
+            </div>
+
+            <div className="container mx-auto">
+                <div className="flex flex-col justify-center items-center">
+                    <div className="col-auto">
+                        <img src={cabinet} alt="cabinet" />
+                    </div>
+                    <div className=" text-center mt-5 font-normal box-border">
+                        <h2 className="text-black text-4xl leading-[1.5] tracking-wide">Up To 40% Off Final Sale Items.
+                            <br />
+                            Caught in the moment!</h2>
+                        <button className='uppercase text-white bg-black p-3 w-44 m-5 font-semibold tracking-[2px]
+                    hover:bg-white hover:text-black hover:border-[1px] hover:border-black transition-all ease-linear'>shop now</button>
+                    </div>
                 </div>
             </div>
         </>
