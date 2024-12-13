@@ -1,5 +1,6 @@
 import './App.css';
 import Banner from './components/banner/Banner';
+import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar.js';
 import Products from './components/products/Products';
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Banner />
       <Products />
+      <Footer />
     </div>
   );
 }
