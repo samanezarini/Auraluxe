@@ -74,8 +74,11 @@ function Products() {
                         <h2 className="text-black text-4xl leading-[1.5] tracking-wide">Up To 40% Off Final Sale Items.
                             <br />
                             Caught in the moment!</h2>
-                        <button className='uppercase text-white bg-black p-3 w-44 m-5 font-semibold tracking-[2px]
-                    hover:bg-white hover:text-black hover:border-[1px] hover:border-black transition-all ease-linear'>shop now</button>
+                        <button class="uppercase mt-5 border border-black bg-black text-white py-2 px-8 tracking-widest font-bold
+                         hover:bg-white hover:text-black transition duration-200">
+                            shop now
+                        </button>
+
                     </div>
                 </div>
             </div>
