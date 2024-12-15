@@ -41,7 +41,7 @@ function Products() {
     return (
         <>
             <NavItem setFilter={setFilter} filter={filter} />
-            <div className="container mx-auto mb-20">
+            <div className="container mx-auto mb-32">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6">
                     {filteredProducts.map((product, index) => (
                         <div
@@ -63,9 +63,9 @@ function Products() {
                                 <h3 className="font-normal text-sm sm:text-base md:text-xl">Lorem ipsum decor three</h3>
                                 <button className="text-red-700 text-xs sm:text-sm md:text-xl font-bold"> + Add to cart</button>
                             </div>
-                            <div className="mt-5 mx-8 sm:mx-8 lg:mx-0">
-                                {product.discount && <span className="mt-2 line-through text-xs sm:text-sm md:text-xl text-gray-400 mr-3">${product.priceOff}</span>}
-                                <span className="font-bold mt-2 text-xs sm:text-sm md:text-xl">${product.price}</span>
+                            <div className="mt-3 mx-8 sm:mx-8 lg:mx-0">
+                                {product.discount && <span className="mt-1 mr-3 line-through text-sm text-gray-400">${product.priceOff}</span>}
+                                <span className="font-bold mt-1 text-sm">${product.price}</span>
                             </div>
 
                         </div>

@@ -11,7 +11,7 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex items-center justify-between bg-white shadow-md">
+        <header className="flex items-center justify-between bg-white fixed top-0 left-0 w-full text-black shadow-md z-50">
             <div className="w-full">
                 <div className="flex justify-between items-center p-6">
                     <img src={Logo} alt="Favicon" className='w-48 h-8 lg:p-0 pl-8' />
