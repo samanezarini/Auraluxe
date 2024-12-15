@@ -29,13 +29,21 @@ function Products() {
     ];
 
     const [hoveredId, setHoveredId] = useState(null);
+    const [filter, setFilter] = useState("all");
+
+    const filteredProducts = filter === "all"
+    ? products
+    : filter === "sale"
+        ? products.filter(product => product.discount)
+        : products.filter(product => product.tags.includes(filter));
+
 
     return (
         <>
-            <NavItem />
+            <NavItem setFilter={setFilter} />
             <div className="container mx-auto mb-20">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6">
-                    {products.map((product, index) => (
+                    {filteredProducts.map((product, index) => (
                         <div
                             key={product.id}
                             className="relative bg-white overflow-hidden mb-4"
@@ -47,9 +55,9 @@ function Products() {
                                 alt={`Product ${product.id}`}
                                 className="object-cover transition-all duration-500 ease-in-out lg:p-0 sm:p-8 p-8" />
                             <div className="absolute top-6 left-6 flex flex-col text-center space-y-2">
-                                {product.discount && <span className="bg-[#98d9cb] text-white absolute top-8 left-8 text-xs lg:top-0 lg:left-0 sm:top-8 sm:left-8 font-semibold px-3 py-4 rounded-full">{product.discount}</span>}
-                                {product.tags.includes('new') && <span className="bg-[#c71a34] text-white absolute top-20 left-8 lg:top-12 lg:left-0 sm:top-20 sm:left-8 md:top-20 text-xs font-semibold px-3 py-4 rounded-full">new</span>}
-                                {product.tags.includes('out') && <span className="bg-gray-900 text-white absolute top-20  left-8 lg:top-12 lg:left-0 sm:top-20 sm:left-8 md:top-20 text-xs font-semibold px-3 py-4 rounded-full">out</span>}
+                                {product.discount && <span className="bg-[#98d9cb] text-white absolute top-8 left-8 lg:top-0 lg:left-0 sm:top-8 sm:left-8 text-xs font-semibold px-2 py-3 w-10 h-10 rounded-full">{product.discount}</span>}
+                                {product.tags.includes('new') && <span className="bg-[#c71a34] text-white absolute top-20 left-8 lg:top-12 lg:left-0 md:top-20 text-xs sm:top-20 sm:left-8 font-semibold px-2 py-3 w-10 h-10 rounded-full">new</span>}
+                                {product.tags.includes('out') && <span className="bg-gray-900 text-white absolute top-20  left-8 lg:top-12 lg:left-0 md:top-20 text-xs sm:top-20 sm:left-8 font-semibold px-3 py-3 w-10 h-10 rounded-full">out</span>}
                             </div>
                             <div className="flex flex-row justify-between mt-7 lg:mx-0 sm:mx-8 mx-8">
                                 <h3 className="font-normal text-sm sm:text-base md:text-xl">Lorem ipsum decor three</h3>
@@ -65,23 +73,25 @@ function Products() {
                 </div>
             </div>
 
-            <div className="container mx-auto">
-                <div className="flex flex-col justify-center items-center">
-                    <div className="lg:mx-0 mx-5 w-full sm:max-w-screen-sm">
-                        <img src={cabinet} alt="cabinet"className="w-full h-auto" />
-                    </div>
-                    <div className=" text-center mt-5 font-normal box-border">
-                        <h2 className="text-black text-xl sm:text-2xl md:text-4xl leading-[1.5] tracking-wide">Up To 40% Off Final Sale Items.
-                            <br />
-                            Caught in the moment!</h2>
-                        <button class="uppercase mt-5 border border-black bg-black text-white py-2 px-8 sm:px-6 md:px-8 tracking-widest font-bold
+            <section>
+                <div className="container mx-auto">
+                    <div className="flex flex-col justify-center items-center">
+                        <div className="lg:mx-0 mx-5 lg:w-full md:w-[100rem] sm:max-w-[655px]">
+                            <img src={cabinet} alt="cabinet" className="w-full h-auto" />
+                        </div>
+                        <div className=" text-center mt-5 font-normal box-border">
+                            <h2 className="text-black text-xl sm:text-2xl md:text-4xl leading-[1.5] tracking-wide">Up To 40% Off Final Sale Items.
+                                <br />
+                                Caught in the moment!</h2>
+                            <button class="uppercase mt-5 border border-black bg-black text-white py-2 px-8 sm:px-6 md:px-8 tracking-widest font-bold
                          hover:bg-white hover:text-black transition duration-200">
-                            shop now
-                        </button>
+                                shop now
+                            </button>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }
