@@ -55,7 +55,7 @@ function Footer() {
                                 placeholder="Your email address"
                                 className="border-b-2 border-gray-300 lg:w-52 md:w-[25.5rem] py-2 focus:outline-none"
                             />
-                            <div className="absolute lg:mt-[7.5rem] lg:ml-40 md:mt-24 md:ml-80 sm:mt-24 sm:ml-[22rem] mt-[7rem] ml-[22rem] text-gray-300">
+                            <div className="absolute lg:mt-[7.5rem] lg:ml-40 md:mt-24 md:ml-80 sm:mt-24 sm:ml-80 mt-[7rem] ml-[20rem] text-gray-300">
                                 <TiArrowRight className='w-8 h-8' />
                             </div>
                         </div>
