@@ -1,6 +1,6 @@
 function NavItem({ setFilter, filter }) {
     return (
-        <div className="container mx-auto border-b-2 mt-5 border-gray-200 dark:border-neutral-700">
+        <div className="container mx-auto border-b-2 mb-14 border-gray-200 dark:border-neutral-700">
             <nav className="-mb-0.5 flex justify-center gap-x-8">
                 <button
                     onClick={() => setFilter("new")}

@@ -1,8 +1,9 @@
+import Navbar from "../../components/navbar/Navbar";
 
-function Element(){
+function Element() {
 
-    return(
-        <h1>Element page</h1>
+    return (
+        <Navbar />
     )
 }
 

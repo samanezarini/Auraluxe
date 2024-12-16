@@ -1,8 +1,15 @@
+import { useParams } from 'react-router-dom';
+import Navbar from '../../components/navbar/Navbar'
 
-function Products(){
+function Products() {
 
-    return(
-        <h1>Products page</h1>
+    const param = useParams().productsId
+    console.log(param)
+
+    return (
+        <>
+            <Navbar />
+        </>
     )
 }
 

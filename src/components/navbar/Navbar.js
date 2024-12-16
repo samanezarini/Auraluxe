@@ -5,6 +5,7 @@ import { FiHeart } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 function Navbar() {
@@ -17,18 +18,23 @@ function Navbar() {
                     <img src={Logo} alt="Favicon" className='w-48 h-8 lg:p-0 pl-8' />
                     <nav className='hidden lg:flex lg:flex-row lg:items-center gap-10'>
                         <ul className="flex flex-row gap-[4.5rem]">
-                            <li className='flex'><a href=''>Home</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex'><a href=''>Shop</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex'><a href=''>Element</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex'><a href=''>Page</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex'><a href=''>Bloge</a><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'>
+                                <NavLink to="/">Home</NavLink><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'>
+                                <NavLink to="/shop">Shop</NavLink><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'>
+                                <NavLink to="/element">Element</NavLink><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'>
+                                <NavLink to="/page">Page</NavLink><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'>
+                                <NavLink to="/blog">Blog</NavLink><IoIosArrowDown className='mt-1 ml-2' /></li>
                         </ul>
                     </nav>
                     <div className='hidden lg:flex gap-7'>
-                        <a href=""><FiSearch className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
-                        <a href=""><LuLogIn className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
-                        <a href=""><FiHeart className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
-                        <a href=""><FiShoppingCart className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
+                        <a><FiSearch className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
+                        <a><LuLogIn className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
+                        <a><FiHeart className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
+                        <a><FiShoppingCart className='w-[1.30rem] h-[1.30rem] cursor-pointer' /></a>
                     </div>
                 </div>
             </div>
@@ -53,11 +59,11 @@ function Navbar() {
                 transition-transform duration-500 ease-in-out z-30`}
             >
                 <ul className="flex flex-col p-6 gap-4 text-gray-700">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Element</a></li>
-                    <li><a href="">Page</a></li>
-                    <li><a href="">Blog</a></li>
+                    <li> <NavLink to="/">Home</NavLink></li>
+                    <li> <NavLink to="/shop">Shop</NavLink></li>
+                    <li> <NavLink to="/element">Element</NavLink></li>
+                    <li> <NavLink to="/page">Page</NavLink></li>
+                    <li> <NavLink to="/blog">Blog</NavLink></li>
                 </ul>
                 <div className="flex justify-center gap-6 p-4 text-gray-700">
                     <FiSearch className="w-6 h-6 cursor-pointer" />

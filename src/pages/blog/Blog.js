@@ -1,8 +1,11 @@
+import Navbar from "../../components/navbar/Navbar";
 
-function Blog(){
+function Blog() {
 
-    return(
-        <h1>blog page</h1>
+    return (
+        <>
+            <Navbar />
+        </>
     )
 }
 

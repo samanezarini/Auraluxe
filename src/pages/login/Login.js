@@ -1,8 +1,11 @@
+import Navbar from "../../components/navbar/Navbar";
 
-function Login(){
+function Login() {
 
-    return(
-        <h1>Login page</h1>
+    return (
+        <>
+            <Navbar />
+        </>
     )
 }
 

@@ -1,8 +1,11 @@
+import Navbar from "../../components/navbar/Navbar";
 
-function Shop(){
+function Shop() {
 
-    return(
-        <h1>Shop page</h1>
+    return (
+        <>
+            <Navbar />
+        </>
     )
 }
 

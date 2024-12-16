@@ -1,8 +1,11 @@
+import Navbar from "../../components/navbar/Navbar";
 
-function Page(){
+function Page() {
 
-    return(
-        <h1>Page page</h1>
+    return (
+        <>
+            <Navbar />
+        </>
     )
 }
 
