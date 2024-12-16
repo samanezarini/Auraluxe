@@ -9,7 +9,7 @@ import Banner3 from '../../assets/images/3.jpg'
 function Banner() {
 
     return (
-        <div>
+        <div className="mt-20 z-10">
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper"
                 loop={true}
                 autoplay={{
@@ -19,7 +19,7 @@ function Banner() {
                 speed={1000}
             >
                 <SwiperSlide>
-                    <img src={Banner1} alt="banner1" className='container mx-auto w-[34rem] h-80 lg:w-[75rem] lg:h-[40rem] md:w-[50rem] md:h-96' />
+                    <img src={Banner1} alt="banner1" className='container mx-auto w-[34rem] h-80 lg:w-[75rem] lg:h-[35rem] md:w-[50rem] md:h-96' />
                     <div className='lg:left-40 md:left-40 left-20 absolute lg:top-28 top-[-1rem] translate-y-1/2'>
                         <h2 className='text-[15px] font-semibold text-blue-400 -tracking-[-8px]'>ACCESSORIES</h2>
                         <h1 className='lg:text-5xl md:text-4xl text-2xl font-semibold text-gray-900 leading-[1.5] pt-5 mb-8 lg:mb-10'>Bottle Grinder,

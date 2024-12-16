@@ -11,17 +11,17 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex items-center justify-between bg-white fixed top-0 left-0 w-full text-black shadow-md z-50">
+        <header className="flex items-center justify-between bg-white fixed top-0 left-0 w-full h-20 text-black shadow-md z-50">
             <div className="w-full">
                 <div className="flex justify-between items-center p-6">
                     <img src={Logo} alt="Favicon" className='w-48 h-8 lg:p-0 pl-8' />
                     <nav className='hidden lg:flex lg:flex-row lg:items-center gap-10'>
                         <ul className="flex flex-row gap-[4.5rem]">
-                            <li className='flex flex-row'><a href=''>Home</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex flex-row'><a href=''>Shop</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex flex-row'><a href=''>Element</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex flex-row'><a href=''>Page</a><IoIosArrowDown className='mt-1 ml-2' /></li>
-                            <li className='flex flex-row'><a href=''>Bloge</a><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'><a href=''>Home</a><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'><a href=''>Shop</a><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'><a href=''>Element</a><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'><a href=''>Page</a><IoIosArrowDown className='mt-1 ml-2' /></li>
+                            <li className='flex'><a href=''>Bloge</a><IoIosArrowDown className='mt-1 ml-2' /></li>
                         </ul>
                     </nav>
                     <div className='hidden lg:flex gap-7'>
