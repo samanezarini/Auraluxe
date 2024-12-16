@@ -1,16 +1,23 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Banner from './components/banner/Banner';
-import Footer from './components/footer/Footer';
-import Navbar from './components/navbar/Navbar.js';
-import Products from './components/products/Products';
+import Home from './pages/home/Home';
+import Shop from './pages/shop/Shop';
+import Element from './pages/element/Element';
+import Page from './pages/page/Page';
+import Blog from './pages/blog/Blog';
 
 function App() {
   return (
-    <div className="bg-white">
-      <Navbar />
-      <Banner />
-      <Products />
-      <Footer />
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/shop' element={<Shop/>} />
+        <Route path='/element' element={<Element/>} />
+        <Route path='/page' element={<Page/>} />
+        <Route path='/blog' element={<Blog/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
