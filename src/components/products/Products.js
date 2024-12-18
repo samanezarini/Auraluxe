@@ -10,7 +10,7 @@ import pro8 from '../../assets/images/products/8.jpg';
 import pro9 from '../../assets/images/products/9.jpg';
 import pro10 from '../../assets/images/products/10.jpg';
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import FooterProducts from "./footerproduct/FooterProduct";
 
 function Products() {
@@ -38,6 +38,10 @@ function Products() {
             ? products.filter(product => product.discount)
             : products.filter(product => product.tags.includes(filter));
 
+            //use param for products
+            const productId = useParams().productId;
+            console.log(productId)
+        
 
     return (
         <>
@@ -51,7 +55,7 @@ function Products() {
                             onMouseEnter={() => setHoveredId(index)}
                             onMouseLeave={() => setHoveredId(null)}
                         >
-                            <Link>
+                            <Link to={`/products/${product.id}`}>
                                 <img
                                     src={hoveredId === index ? productImages[productImages.length - 1 - index] : productImages[index]}
                                     alt={`Product ${product.id}`}
